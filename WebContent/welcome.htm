@@ -1,0 +1,537 @@
+<html>
+<head>
+<title>Agile Estimation Model (Bottom Up)</title>
+<Body bgcolor="#E6E6FA">
+<!-- ======================================================================================================================================= -->
+<form method="GET" action="agileEstimation" name="agileEstimation">
+
+	<center><font face="Times New Roman" size="5" color="#000080"><b> Agile Estimation Model </b></font></center>		  
+	<center><font face="Times New Roman" size="1" color="#000080"><b> <I>[Researched & Developed (R&D) By Mothukuru Sreenivas, AgileCoE/UTO] </I></b></font></center>
+	<hr size="1" color="#008000"><b>
+
+	<p><font face="Arial" color="#008000">Login Credentials:</font></p>    
+	<TABLE>
+		<TR>
+			<TD width="500">User Name (Enter valid "User Name")</TD>
+			<TD width="300"><Center><input TYPE="text" NAME="username" SIZE="60" tabindex=1 value="" maxlength="60"></Center></TD>
+		</TR>
+		<TR>
+			<TD width="500">Password (Enter valid "Password")</TD>
+			<TD width="300"><Center><input TYPE="text" NAME="password" SIZE="60" tabindex=2 value="" maxlength="60"></Center></TD>
+		</TR>	
+	</TABLE>
+
+<p><font face="Arial" color="BLACK" size="1">(Note: Kindly reach out to 'sreenivas.mothukuru@capgemini.com' for "User Name & "Password") </font></p>
+
+	<hr size="1" color="#008000"><b>
+	
+	<p><font face="Arial" color="#008000">Project Level Adjustment Factors:</font></p>    
+
+	<TABLE>
+		<TR>
+			<TD><font color="">Technology used?</font></TD>	 
+			<TD> <select name="TechnologyUsed" size="1" tabindex=3>
+					  <option value="Java" selected>Java or .Net or Client Server</option>
+					  <option value="Legacy">Legacy (mainframes)</option>
+					  <option value="Packaged">Packaged (SAP or Guidewire)</option>
+					  <option value="Combination of all">Combination of All</option>
+				  </select></TD>
+		</TR>
+	
+		<TR>
+			<TD><font color="">What is the Domain level complexity?</font></TD>	 
+			<TD> <select name="DomainLevelComplexity" size="1" tabindex=4>
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+					  <option value="Too Complex">Too Complex</option>
+				  </select></TD>
+		</TR>		
+		
+		<TR>
+			<TD><font color="">Are teams co-located or geographically distributed?</font></TD>	 
+			<TD> <select name="Location" size="1" tabindex=5>
+					  <option value="Colocated">Co-located</option>
+					  <option value="Distributed" selected>Geographically Distributed</option>
+				  </select></TD>
+		</TR>		
+		
+		<TR>
+			<TD><font color="">Is Progression test automation infrastructure available?</font></TD>	 
+			<TD> <select name="ProgressionAutomationInfrastructureAvailablity" size="1" tabindex=6>
+					  <option value="Yes">Yes</option>
+					  <option value="No" selected>No</option>
+					  <option value="Not Applicable">Not Applicable</option>
+				  </select></TD>
+		</TR>	
+	
+		<TR>
+			<TD><font color="">Is Regression test automation infrastructure available?</font></TD>	 
+			<TD> <select name="RegressionAutomationInfrastructureAvailablity" size="1" tabindex=7>
+					  <option value="Yes">Yes</option>
+					  <option value="No" selected>No</option>
+				  </select></TD>
+		</TR>		
+	
+		<TR>
+			<TD><font color="">Availability of pre-scripted automated regression test suites (i.e. existing automation test coverage)?</font></TD>	 
+			<TD> <select name="Automation" size="1" tabindex=8>
+					  <option value="No Automation Coverage">No automation coverage!</option>
+					  <option value="~25% Automation Coverage" selected>~25% of the total test cases automated</option>
+					  <option value="50% Automation Coverage">~50% of the total test cases automated</option>
+					  <option value="~75% Automation Coverage">~75% of the total test cases automated</option>
+				  </select></TD>
+		</TR>		
+		
+		<TR>
+			<TD><font color="">Is Build and Deployment infrastructure automated?</font></TD>	 
+			<TD> <select name="Build&DeploymentInfrastructureAutomated" size="1" tabindex=9>
+					  <option value="Semi Automated" selected>Semi-Automated</option>
+					  <option value="Fully Automated">Fully Automated</option>
+					  <option value="Fully Manual">Fully Manually</option>
+				  </select></TD>
+		</TR>	
+	
+		<TR>
+			<TD><font color="">What is the Test Management effort?</font></TD>	 
+			<TD> <select name="TestManagement" size="1" tabindex=10>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		<TR>
+			<TD><font color="">What is the Test Data and/or Test Documentation preparation effort?</font></TD>	 
+			<TD> <select name="TestData" size="1" tabindex=11>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">What is the Test Environment preparation effort?</font></TD>	 
+			<TD> <select name="TestEnvironment" size="1" tabindex=12>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">How is the Network connectivity?</font></TD>	 
+			<TD> <select name="NetworkConnectivity" size="1" tabindex=13>
+					  <option value="Excellent">Excellent</option>
+					  <option value="Good" selected>Good</option>
+					  <option value="Average">Average</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">Is Pro-active monitoring / health check system infrastructure available?</font></TD>	 
+			<TD> <select name="ProactiveMonitoring" size="1" tabindex=14>
+					  <option value="Highly Available">Highly Available</option>
+					  <option value="Available">Available</option>
+					  <option value="Highly Unavailable" selected>Highly Unavailable</option>
+					  <option value="Not Applicable">Not Applicable</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">How is the support from Client management?</font></TD>	 
+			<TD> <select name="SupportfromClientmanagement" size="1" tabindex=15>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+					  <option value="Not Applicable">Not Applicable</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">How is the support from Vendor management?</font></TD>	 
+			<TD> <select name="SupportfromVendormanagement" size="1" tabindex=16>
+					  <option value="Highly Available">High</option>
+					  <option value="Available" selected>Medium</option>
+					  <option value="Highly Unavailable">Low</option>
+					  <option value="Not Applicable">Not Applicable</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">Availability of Product / Business Owner's? </font></TD>	 
+			<TD> <select name="ProductOrBusinessOwnersAvailability" size="1" tabindex=17>
+					  <option value="Highly Available">Highly Available</option>
+					  <option value="Available" selected>Available</option>
+					  <option value="Highly Unavailable">Highly Unavailable</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">Are Product/Business Owners aware of agile principles and practices?</font></TD>	 
+			<TD> <select name="AgileAwarenessProductOrBusinessOwners" size="1" tabindex=18>
+					  <option value="AwareOf Agile Principles & Practices"> Aware of Agile Principles and Practices</option>
+					  <option value="UnAwareOf Agile Principles & Practices" selected> UnAware of Agile Principles and Practices</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">Availability of Support team's?</font></TD>	 
+			<TD> <select name="SupportTeamsAvailability" size="1" tabindex=19>
+					  <option value="High">HighlyAvailable</option>
+					  <option value="Medium" selected>Available</option>
+					  <option value="low">HighlyUnavailable</option>
+					  <option value="Not Applicable">Not Applicable</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">How is the Onsite or Nearshore coordinator's role and responsibilities?</font></TD>	 
+			<TD> <select name="OnsiteOrNearshoreCoordinatorsRoleResponsibilities" size="1" tabindex=20>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">Does the Testers have Read (/Write) access to core systems (i.e. Servers, Source Code, Database, etc)?</font></TD>	 
+			<TD> <select name="ReadWriteAccess" size="1" tabindex=21>
+					  <option value="Yes">Yes</option>
+					  <option value="No" selected>No</option>
+					  <option value="Not Applicable">Not Applicable</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">How is the team's Domain knowledge?</font></TD>	 
+			<TD> <select name="DomainKnowledge" size="1" tabindex=22>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">What is the level of re-usability of manual tests in subsequent sprints?</font></TD>	 
+			<TD> <select name="ReusabilityManualTests" size="1" tabindex=23>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">Are Testers aware of agile principles and practices?</font></TD>	 
+			<TD> <select name="AgileAwarenessTesters" size="1" tabindex=24>
+					  <option value="Less than 25% trained on Agile"> Less than 25% Trained on Agile</option>
+					  <option value="Around 50% trained on Agile" selected> Around 50% Trained on Agile</option>
+					  <option value="More than 75% trained on Agile"> More than 75% Trained on Agile</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">How is the collaboration with Customers, Approval processes, Receptivity for feedback (Stand-Up, Retrospective, Customer Feedback)?</font></TD>	 
+			<TD> <select name="Collaboration" size="1" tabindex=25>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">What is the Defect Turn around Time (Dependencies with Dev, Environment issues, etc.)?</font></TD>	 
+			<TD> <select name="TurnAroundTime" size="1" tabindex=26>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">What is the requirement Re-factoring and User Story set back effort?</font></TD>	 
+			<TD> <select name="Refactoring" size="1" tabindex=27>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+		</TR>
+		
+		
+		<TR>
+			<TD><font color="">Testing cycles (1 or 2 rounds of testing)?</font></TD>	 
+			<TD> <select name="Cycles" size="1" tabindex=28>
+					  <option value="1 Round of Testing">1</option>
+					  <option value="2 Rounds of Testing" selected>2</option>
+				  </select></TD>
+		</TR>
+	
+	</TABLE>
+
+	<hr size="1" color="#008000"><b>
+
+    <p><font face="Arial" color="#008000"><b>Scenario Level Adjustment Factors:</b></font></p>
+
+	<TABLE border="2" cellspacing="value" cellpadding="2" rules="all">
+	
+		<TR style="text-align:center">
+			<TD width="15%" align="center"><font color="Brown"><B>User Story Type</B></Font></TD>
+			<TD width="15%" align="center"><font color="Brown"><B>No. of Test Cases</B></Font></TD>
+			<TD width="15%" align="center"><font color="Brown"><B>Clarity Level</B></Font></TD>
+			<TD width="15%" align="center"><font color="Brown"><B>Functional Complexity Level</B></Font></TD>
+			<TD width="15%" align="center"><font color="Brown"><B>Familiarity Level</B></Font></TD>
+			<TD width="15%" align="center"><font color="Brown"><B>Verification Type</B></Font></TD>
+		</TR>
+		
+		<TR style="text-align:center">
+			<TD width="15%">Extra Small</TD>
+			<TD width="15%" align="center">
+				  <select name="extrasmalltestcases" size="1">
+					  <option value=1>01</option>
+					  <option value=2 selected>02</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="extrasmallclarity" size="1">
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%">
+				  <select name="extrasmallcomplexity" size="1">
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="extrasmallfamiliarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%"> 
+				  <select name="extrasmallverification" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+		</TR>
+	
+		<TR style="text-align:center">
+			<TD width="15%">Small</TD>
+			<TD width="15%">
+				  <select name="smalltestcases" size="1" >
+					  <option value=3 selected>03</option>
+					  <option value=4>04</option>
+					  <option value=5>05</option>
+				  </select></TD>
+			<TD width="15%"> 
+				  <select name="smallclarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="smallcomplexity" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="smallfamiliarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%"> 
+				  <select name="smallverification" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex" >Complex</option>
+				  </select></TD>
+		</TR>
+
+		<TR style="text-align:center">
+			<TD width="15%">Medium</TD>
+			<TD width="15%">
+				  <select name="mediumtestcases" size="1" >
+					  <option value=6 selected>06</option>
+					  <option value=7>07</option>
+					  <option value=8>08</option>
+					  <option value=9>09</option>
+					  <option value=10>10</option>
+					  <option value=11>11</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="mediumclarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="mediumcomplexity" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="mediumfamiliarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%">
+				  <select name="mediumverification" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+		</TR>
+	
+		<TR style="text-align:center">
+			<TD width="15%">Large</TD>
+			<TD width="15%">
+				  <select name="largetestcases" size="1" >
+					  <option value=12 selected>12</option>
+					  <option value=14>14</option>
+					  <option value=16>16</option>
+					  <option value=18>18</option>
+					  <option value=20>20</option>
+					  <option value=22>22</option>
+				  </select></TD>
+			<TD width="15%">
+				  <select name="largeclarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%"> 
+				  <select name="largecomplexity" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="largefamiliarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%">  
+				  <select name="largeverification" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+		</TR>
+
+		<TR style="text-align:center">
+			<TD width="15%">Extra Large</TD>
+			<TD width="15%">
+				  <select name="extralargetestcases" size="1" >
+					  <option value=25 selected>25</option>
+		  			  <option value=30>30</option>
+					  <option value=35>35</option>
+					  <option value=40>40</option>
+				  </select></TD>
+			<TD width="15%">
+				  <select name="extralargeclarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%"> 
+				  <select name="extralargecomplexity" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+			<TD width="15%">
+				  <select name="extralargefamiliarity" size="1" >
+					  <option value="Complete">Complete</option>
+					  <option value="High">High</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Low">Low</option>
+				  </select></TD>
+			<TD width="15%"> 
+				  <select name="extralargeverification" size="1" >
+					  <option value="Simple">Simple</option>
+					  <option value="Medium" selected>Medium</option>
+					  <option value="Complex">Complex</option>
+				  </select></TD>
+		</TR>
+	</TABLE>
+
+	<BR>
+
+	<hr size="1" color="#008000"><b>
+	
+	</b><p><font face="Arial" color="#008000"><b>Total No. of User Stories (approx.):</b></font></p>
+
+	<TABLE border="2" cellspacing="value" cellpadding="2" rules="all">
+	
+		<TR style="text-align:center">
+			<TD width="300"><font color="Brown"><B>User Story Type</B></Font></TD>
+			<TD width="300"><font color="Brown"><B>No. of User Stories</B></Font></TD>
+		</TR>
+		
+		<TR style="text-align:center">
+			<TD width="300">Extra Small</TD>
+			<TD width="300"><input TYPE="text" NAME="extrasmallnumber" SIZE="4" value="1" maxlength="4"></TD>
+		</TR>
+		
+		<TR style="text-align:center">
+			<TD width="300">Small</TD>
+			<TD width="300"><input TYPE="text" NAME="smallnumber" SIZE="4"  value="1" maxlength="4"></TD>
+		</TR>
+		
+		<TR style="text-align:center">
+			<TD width="300">Medium</TD>
+			<TD width="300"><input TYPE="text" NAME="mediumnumber" SIZE="4"  value="1" maxlength="4"></TD>
+		</TR>
+		
+		<TR style="text-align:center">
+			<TD width="300">Large</TD>
+			<TD width="300"><input TYPE="text" NAME="largenumber" SIZE="4"  value="1" maxlength="4"></TD>
+		</TR>
+		
+		<TR style="text-align:center">
+			<TD width="300">Extra Large</TD>
+			<TD width="300"><input TYPE="text" NAME="extralargenumber" SIZE="4"  value="1" maxlength="4"></TD>
+		</TR>
+		
+	</TABLE>
+
+<BR>
+      <center><font face="Arial"><input TYPE="submit" VALUE="Calculate Testing Effort" ></font></center>
+    </form>
+<!-- ======================================================================================================================================= -->
+
+<!-- *************************************************************************************************************************** -->
+
+</body>
+</html>
